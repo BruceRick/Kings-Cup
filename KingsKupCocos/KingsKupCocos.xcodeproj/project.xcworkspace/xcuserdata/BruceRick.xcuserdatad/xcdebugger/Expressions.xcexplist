@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[Deck DrawCards:]:Deck.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "m_pDeck">
+            </PersistentString>
+            <PersistentString
+               value = "m_pAllCards">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Deck Shuffle]:Deck.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
