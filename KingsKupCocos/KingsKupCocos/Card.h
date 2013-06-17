@@ -8,9 +8,9 @@
 
 #import "CCSprite.h"
 #import "Deck.h"
-#import "HelloWorldLayer.h"
+#import "GameLayer.h"
 
-@class HelloWorldLayer;
+@class GameLayer;
 @class Deck;
 
 @interface Card : CCSprite
@@ -18,7 +18,8 @@
 @property (nonatomic, assign) int m_Suit;
 @property (nonatomic, assign) int m_Value;
 @property (nonatomic, assign) CGPoint m_Position;
-@property (nonatomic, assign) CCSprite* m_pTexture;
+@property (nonatomic, assign) CCSprite* m_pBackTexture;
+@property (nonatomic, assign) CCSprite* m_pFrontTexture;
 @property (nonatomic, assign) Boolean m_isFlipped;
 @property (nonatomic, assign) CGPoint m_OriginalScale;
 
@@ -28,6 +29,7 @@
 - (void)Init:(int)a_Suit:(int)a_Value:(NSString*)a_pTexture;
 - (void)Draw:(CGPoint)a_Position;
 - (void)Update;
+- (NSString*)GenValLab;
 
 
 

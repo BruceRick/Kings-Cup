@@ -10,10 +10,10 @@
 #import "CCSprite.h"
 #import "Card.h"
 #import "CCLayer.h"
-#import "HelloWorldLayer.h"
+#import "GameLayer.h"
 
 
-@class HelloWorldLayer;
+@class GameLayer;
 @class Card;
 
 @interface Deck : CCSprite

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085D9E171769619600463A23 /* WhiteRec.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E161769619500463A23 /* WhiteRec.jpg */; };
+		085D9E3C176972F700463A23 /* KingsCupBitMapFont-empty.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E3A176972F400463A23 /* KingsCupBitMapFont-empty.fnt */; };
+		085D9E3D176972F700463A23 /* KingsCupBitMapFont-empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E3B176972F500463A23 /* KingsCupBitMapFont-empty.png */; };
+		085D9E401769766E00463A23 /* KingsKupCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E3E1769766E00463A23 /* KingsKupCard.png */; };
+		085D9E411769766E00463A23 /* KingsKupCardFront.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E3F1769766E00463A23 /* KingsKupCardFront.png */; };
+		085D9E43176A489900463A23 /* LogoScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E42176A489900463A23 /* LogoScreen.png */; };
+		085D9E45176A48BD00463A23 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E44176A48BD00463A23 /* Default.png */; };
+		085D9E48176A515400463A23 /* CardSelectedLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D9E47176A515300463A23 /* CardSelectedLayer.m */; };
+		085D9E4A176A9A2300463A23 /* BlackRect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E49176A9A2300463A23 /* BlackRect.jpg */; };
+		085D9E4C176A9CAA00463A23 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E4B176A9CAA00463A23 /* Default-568h@2x.png */; };
 		088174EC1717402600B4BB9B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088174EB1717402600B4BB9B /* QuartzCore.framework */; };
 		088174EE1717402600B4BB9B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088174ED1717402600B4BB9B /* OpenGLES.framework */; };
 		088174F01717402600B4BB9B /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088174EF1717402600B4BB9B /* OpenAL.framework */; };
@@ -16,7 +26,6 @@
 		088174F81717402600B4BB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088174F71717402600B4BB9B /* Foundation.framework */; };
 		088174FA1717402600B4BB9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088174F91717402600B4BB9B /* CoreGraphics.framework */; };
 		088174FC1717402600B4BB9B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088174FB1717402600B4BB9B /* GameKit.framework */; };
-		088175001717402600B4BB9B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 088174FF1717402600B4BB9B /* Default.png */; };
 		088175021717402700B4BB9B /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 088175011717402700B4BB9B /* Default-Landscape~ipad.png */; };
 		088175041717402700B4BB9B /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 088175031717402700B4BB9B /* fps_images.png */; };
 		088175061717402700B4BB9B /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 088175051717402700B4BB9B /* fps_images-hd.png */; };
@@ -131,7 +140,7 @@
 		0881766F1717402800B4BB9B /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 0881766E1717402800B4BB9B /* vec4.c */; };
 		088176741717402800B4BB9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 088176731717402800B4BB9B /* main.m */; };
 		088176771717402800B4BB9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 088176761717402800B4BB9B /* AppDelegate.m */; };
-		0881767A1717402800B4BB9B /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 088176791717402800B4BB9B /* HelloWorldLayer.m */; };
+		0881767A1717402800B4BB9B /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 088176791717402800B4BB9B /* GameLayer.m */; };
 		0881767D1717402800B4BB9B /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0881767C1717402800B4BB9B /* IntroLayer.m */; };
 		088176861717909200B4BB9B /* FeltTable.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 088176851717909200B4BB9B /* FeltTable.jpeg */; };
 		0881768917179C7800B4BB9B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 0881768817179C7800B4BB9B /* Card.m */; };
@@ -140,6 +149,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		085D9E161769619500463A23 /* WhiteRec.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WhiteRec.jpg; sourceTree = "<group>"; };
+		085D9E3A176972F400463A23 /* KingsCupBitMapFont-empty.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KingsCupBitMapFont-empty.fnt"; sourceTree = "<group>"; };
+		085D9E3B176972F500463A23 /* KingsCupBitMapFont-empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KingsCupBitMapFont-empty.png"; sourceTree = "<group>"; };
+		085D9E3E1769766E00463A23 /* KingsKupCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KingsKupCard.png; sourceTree = "<group>"; };
+		085D9E3F1769766E00463A23 /* KingsKupCardFront.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KingsKupCardFront.png; sourceTree = "<group>"; };
+		085D9E42176A489900463A23 /* LogoScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoScreen.png; sourceTree = "<group>"; };
+		085D9E44176A48BD00463A23 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		085D9E46176A515300463A23 /* CardSelectedLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSelectedLayer.h; sourceTree = "<group>"; };
+		085D9E47176A515300463A23 /* CardSelectedLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSelectedLayer.m; sourceTree = "<group>"; };
+		085D9E49176A9A2300463A23 /* BlackRect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BlackRect.jpg; path = ../../../Pictures/BlackRect.jpg; sourceTree = "<group>"; };
+		085D9E4B176A9CAA00463A23 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		088174E71717402600B4BB9B /* KingsKupCocos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingsKupCocos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		088174EB1717402600B4BB9B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		088174ED1717402600B4BB9B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -150,7 +170,6 @@
 		088174F71717402600B4BB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		088174F91717402600B4BB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		088174FB1717402600B4BB9B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		088174FF1717402600B4BB9B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		088175011717402700B4BB9B /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Resources/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		088175031717402700B4BB9B /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
 		088175051717402700B4BB9B /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fps_images-hd.png"; path = "Resources/fps_images-hd.png"; sourceTree = "<group>"; };
@@ -398,8 +417,8 @@
 		088176731717402800B4BB9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		088176751717402800B4BB9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		088176761717402800B4BB9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		088176781717402800B4BB9B /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		088176791717402800B4BB9B /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
+		088176781717402800B4BB9B /* GameLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
+		088176791717402800B4BB9B /* GameLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameLayer.m; sourceTree = "<group>"; };
 		0881767B1717402800B4BB9B /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		0881767C1717402800B4BB9B /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		088176851717909200B4BB9B /* FeltTable.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FeltTable.jpeg; sourceTree = "<group>"; };
@@ -433,6 +452,8 @@
 		088174DC1717402600B4BB9B = {
 			isa = PBXGroup;
 			children = (
+				085D9E4B176A9CAA00463A23 /* Default-568h@2x.png */,
+				085D9E44176A48BD00463A23 /* Default.png */,
 				088174FD1717402600B4BB9B /* KingsKupCocos */,
 				088174EA1717402600B4BB9B /* Frameworks */,
 				088174E81717402600B4BB9B /* Products */,
@@ -468,8 +489,10 @@
 			children = (
 				088176751717402800B4BB9B /* AppDelegate.h */,
 				088176761717402800B4BB9B /* AppDelegate.m */,
-				088176781717402800B4BB9B /* HelloWorldLayer.h */,
-				088176791717402800B4BB9B /* HelloWorldLayer.m */,
+				085D9E46176A515300463A23 /* CardSelectedLayer.h */,
+				085D9E47176A515300463A23 /* CardSelectedLayer.m */,
+				088176781717402800B4BB9B /* GameLayer.h */,
+				088176791717402800B4BB9B /* GameLayer.m */,
 				0881767B1717402800B4BB9B /* IntroLayer.h */,
 				0881767C1717402800B4BB9B /* IntroLayer.m */,
 				088174FE1717402600B4BB9B /* Resources */,
@@ -486,9 +509,15 @@
 		088174FE1717402600B4BB9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				085D9E49176A9A2300463A23 /* BlackRect.jpg */,
+				085D9E42176A489900463A23 /* LogoScreen.png */,
+				085D9E3E1769766E00463A23 /* KingsKupCard.png */,
+				085D9E3F1769766E00463A23 /* KingsKupCardFront.png */,
+				085D9E3A176972F400463A23 /* KingsCupBitMapFont-empty.fnt */,
+				085D9E3B176972F500463A23 /* KingsCupBitMapFont-empty.png */,
+				085D9E161769619500463A23 /* WhiteRec.jpg */,
 				088176911717B5CE00B4BB9B /* Card.jpg */,
 				088176851717909200B4BB9B /* FeltTable.jpeg */,
-				088174FF1717402600B4BB9B /* Default.png */,
 				088175011717402700B4BB9B /* Default-Landscape~ipad.png */,
 				088175031717402700B4BB9B /* fps_images.png */,
 				088175051717402700B4BB9B /* fps_images-hd.png */,
@@ -898,7 +927,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				088175001717402600B4BB9B /* Default.png in Resources */,
 				088175021717402700B4BB9B /* Default-Landscape~ipad.png in Resources */,
 				088175041717402700B4BB9B /* fps_images.png in Resources */,
 				088175061717402700B4BB9B /* fps_images-hd.png in Resources */,
@@ -913,6 +941,15 @@
 				088176551717402800B4BB9B /* ChangeLog in Resources */,
 				088176861717909200B4BB9B /* FeltTable.jpeg in Resources */,
 				088176921717B5CE00B4BB9B /* Card.jpg in Resources */,
+				085D9E171769619600463A23 /* WhiteRec.jpg in Resources */,
+				085D9E3C176972F700463A23 /* KingsCupBitMapFont-empty.fnt in Resources */,
+				085D9E3D176972F700463A23 /* KingsCupBitMapFont-empty.png in Resources */,
+				085D9E401769766E00463A23 /* KingsKupCard.png in Resources */,
+				085D9E411769766E00463A23 /* KingsKupCardFront.png in Resources */,
+				085D9E43176A489900463A23 /* LogoScreen.png in Resources */,
+				085D9E45176A48BD00463A23 /* Default.png in Resources */,
+				085D9E4A176A9A2300463A23 /* BlackRect.jpg in Resources */,
+				085D9E4C176A9CAA00463A23 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1025,10 +1062,11 @@
 				0881766F1717402800B4BB9B /* vec4.c in Sources */,
 				088176741717402800B4BB9B /* main.m in Sources */,
 				088176771717402800B4BB9B /* AppDelegate.m in Sources */,
-				0881767A1717402800B4BB9B /* HelloWorldLayer.m in Sources */,
+				0881767A1717402800B4BB9B /* GameLayer.m in Sources */,
 				0881767D1717402800B4BB9B /* IntroLayer.m in Sources */,
 				0881768917179C7800B4BB9B /* Card.m in Sources */,
 				0881768C1717AA9C00B4BB9B /* Deck.m in Sources */,
+				085D9E48176A515400463A23 /* CardSelectedLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

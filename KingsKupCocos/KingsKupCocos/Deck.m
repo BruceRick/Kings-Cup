@@ -97,8 +97,8 @@ CGSize winSize;
         
         Card *card = [_pDeck objectAtIndex:i];
         
-        card.m_pTexture.scaleX = CardSize.x/card.m_pTexture.contentSize.width;
-        card.m_pTexture.scaleY = CardSize.y/card.m_pTexture.contentSize.height;
+        card.m_pBackTexture.scaleX = CardSize.x/card.m_pBackTexture.contentSize.width;
+        card.m_pBackTexture.scaleY = CardSize.y/card.m_pBackTexture.contentSize.height;
         //ccColor3B tint = ccc3(255, 0, 0);
         
         //[card setColor:tint];
@@ -111,18 +111,18 @@ CGSize winSize;
         //card.m_pTexture.scaleX /= 2;
         //card.m_pTexture.scaleY /= 2;
         
-        _CardPosition.x = i * (card.m_pTexture.contentSize.width * card.m_pTexture.scaleX);
+        _CardPosition.x = i * (card.m_pBackTexture.contentSize.width * card.m_pBackTexture.scaleX);
         _CardPosition.y = winSize.height/2;
         
-        card.m_OriginalScale =  ccp(card.m_pTexture.scaleX,card.m_pTexture.scaleY);
+        card.m_OriginalScale =  ccp(card.m_pBackTexture.scaleX,card.m_pBackTexture.scaleY);
         
         
         
         
-        card.m_pTexture.position = ccp(_CardPosition.x,_CardPosition.y);
+        card.m_pBackTexture.position = ccp(_CardPosition.x,_CardPosition.y);
         
         
-        [self addChild:card.m_pTexture];
+        [self addChild:card.m_pBackTexture];
 
         [card release];
         
@@ -205,22 +205,8 @@ CGSize winSize;
             card.scaleX = _OriginalScale.x + DisFromMid;
             card.scaleY = _OriginalScale.y + DisFromMid;
             
-            
-            
         }
-        
-        
-        
-        
-        int a = card.contentSize.width * card.scaleX;
-        float b = card.scaleX;
-        
-        
-        
-        
-        
-       
-        
+
         //[card release];
         
     }

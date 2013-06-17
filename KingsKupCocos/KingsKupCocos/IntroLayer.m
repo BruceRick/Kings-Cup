@@ -9,7 +9,7 @@
 
 // Import the interfaces
 #import "IntroLayer.h"
-#import "HelloWorldLayer.h"
+#import "GameLayer.h"
 
 
 #pragma mark - IntroLayer
@@ -42,13 +42,11 @@
 	CGSize size = [[CCDirector sharedDirector] winSize];
 
 	CCSprite *background;
-	
-	if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
-		background = [CCSprite spriteWithFile:@"Default.png"];
-		background.rotation = 90;
-	} else {
-		background = [CCSprite spriteWithFile:@"Default-Landscape~ipad.png"];
-	}
+    
+    
+    background = [CCSprite spriteWithFile:@"Default.png"];
+    background.scaleX = size.width/background.contentSize.width;
+    background.scaleY = size.height/background.contentSize.height;
 	background.position = ccp(size.width/2, size.height/2);
 
 	// add the label as a child to this Layer
@@ -60,6 +58,6 @@
 
 -(void) makeTransition:(ccTime)dt
 {
-	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[HelloWorldLayer scene] withColor:ccWHITE]];
+	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameLayer scene] withColor:ccWHITE]];
 }
 @end

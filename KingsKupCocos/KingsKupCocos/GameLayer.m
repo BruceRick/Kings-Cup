@@ -8,23 +8,28 @@
 
 
 // Import the interfaces
-#import "HelloWorldLayer.h"
+#import "GameLayer.h"
+#import "CardSelectedLayer.h"
+
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 
-#pragma mark - HelloWorldLayer
+#pragma mark - GameLayer
 
 
 
 
-@interface HelloWorldLayer()
+@interface GameLayer()
 {
     Deck *_pDeck;
     float _DeckMovementFriction;
     CGPoint _DeckMovementVelocity;
     CGSize winSize;
     Card *_pSelectedCard;
+    BOOL _CardSelected;
+    
+    CardSelectedLayer *_pCardSelectedLayer;
     
 }
 
@@ -32,18 +37,19 @@
 
 
 // HelloWorldLayer implementation
-@implementation HelloWorldLayer
+@implementation GameLayer
 
 
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
 {
+    
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
-	HelloWorldLayer *layer = [HelloWorldLayer node];
+	GameLayer *layer = [GameLayer node];
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
@@ -55,7 +61,6 @@
 // on "init" you need to initialize your instance
 - (id) init
 {
-    
     
     if ((self = [super init]))
     {
@@ -85,44 +90,37 @@
         [[CCDirector sharedDirector].view addGestureRecognizer:swipeUpGestureRecognizer];
         [[CCDirector sharedDirector].view addGestureRecognizer:tapGestureRecognizer];
         
-        CCSprite *pBackground = [[CCSprite node ]initWithFile:@"FeltTable.jpeg"];
+        [swipeLeftGestureRecognizer release];
+        [swipeRightGestureRecognizer release];
+        [swipeUpGestureRecognizer release];
+        [tapGestureRecognizer release];
+        
+        CCSprite *pBackground = [[CCSprite alloc]initWithFile:@"FeltTable.jpeg"];
         CGSize backgroundSize = pBackground.contentSize;
         pBackground.position = ccp(winSize.width/2,winSize.height/2);
         
         pBackground.scaleX = winSize.width/backgroundSize.width;
         pBackground.scaleY = winSize.height/backgroundSize.height;
         
-    
-        
-        
         _pDeck = [Deck node];
         _DeckMovementFriction = 0.9;
         _DeckMovementVelocity = ccp(0,0);
         
-        
-        
-        
-        [_pDeck Initialize:(NSString*)@"Card.jpg"];
+        [_pDeck Initialize:(NSString*)@"KingsKupCard.png"];
         
         //[_pDeck Initialize:[[CCSprite alloc ]initWithFile:@"Card.jpg"]];
         [self addChild:pBackground];
-        
-        
-        
-        
         
         [_pDeck Shuffle];
         [_pDeck DrawCards];
         
         [self addChild:_pDeck];
-        
-        
-        
         [self schedule:@selector(update:)];
         //[self schedule:@selector(draw:)];
-        
-        
         _pSelectedCard = [_pDeck.m_pDeck objectAtIndex:0];
+        
+        
+        
         
         
     }
@@ -131,6 +129,9 @@
 
 - (void)update:(ccTime)dt
 {
+    
+    if(_CardSelected)
+        return;
     
     _DeckMovementVelocity.x *= _DeckMovementFriction;
     _DeckMovementVelocity.y *= _DeckMovementFriction;
@@ -163,14 +164,13 @@
 
 - (void)MoveDeckLeft:(UIGestureRecognizer*)recognizer
 {
-    
+
     _DeckMovementVelocity.x = -20;
     
 }
 
 - (void)MoveDeckRight:(UIGestureRecognizer*)recognizer
 {
-    
     _DeckMovementVelocity.x = 20;
     
 }
@@ -178,78 +178,46 @@
 - (void)HandleSwipeUp:(UITapGestureRecognizer*)recognizer
 {
     
-    float minX = _pSelectedCard.m_pTexture.position.x - _pSelectedCard.m_pTexture.contentSize.width/2 + _pDeck.position.x;
-    float maxX = _pSelectedCard.m_pTexture.position.x + _pSelectedCard.m_pTexture.contentSize.width/2 + _pDeck.position.x;
-    float minY = _pSelectedCard.m_pTexture.position.y - _pSelectedCard.m_pTexture.contentSize.height/2;
-    float maxY = _pSelectedCard.m_pTexture.position.y + _pSelectedCard.m_pTexture.contentSize.height/2;
+    [_pSelectedCard.m_pBackTexture removeFromParentAndCleanup:YES];
     
-    CGPoint tapPosition = [recognizer locationInView:[[CCDirector sharedDirector] openGLView]];
+    _CardSelected = YES;
     
-    if(tapPosition.x > minX && tapPosition.x < maxX && tapPosition.y > minY && tapPosition.y < maxY)
-    {
-        for(Card *card in _pDeck.m_pDeck)
-        {
-            if(card != _pSelectedCard)
-                card.m_pTexture.opacity = 0;
-            
-        }
-    }
+    _pCardSelectedLayer = [[CardSelectedLayer alloc] initWithCard:_pSelectedCard];
     
-    _pSelectedCard.m_pTexture.position = ccp(winSize.width/2,winSize.height/2);
-    
-    
-    CCActionInterval *inA, *outA;
-
-    
-    float inDeltaZ, inAngleZ;
-    float outDeltaZ, outAngleZ;
-    
-        inDeltaZ = 90;
-        inAngleZ = 270;
-        outDeltaZ = 90;
-        outAngleZ = 0;
-    
-        
-    float duration_ = 2;
-    
-    inA = [CCSequence actions:
-           [CCDelayTime actionWithDuration:duration_/2],
-           [CCShow action],
-           [CCOrbitCamera actionWithDuration: duration_/2 radius: 1 deltaRadius:0 angleZ:inAngleZ deltaAngleZ:inDeltaZ angleX:0 deltaAngleX:0],
-           [CCCallFunc actionWithTarget:self selector:@selector(finish)],
-           nil ];
-    outA = [CCSequence actions:
-            [CCOrbitCamera actionWithDuration: duration_/2 radius: 1 deltaRadius:0 angleZ:outAngleZ deltaAngleZ:outDeltaZ angleX:0 deltaAngleX:0],
-            [CCHide action],
-            [CCDelayTime actionWithDuration:duration_/2],
-            nil ];
-    
-    [_pSelectedCard.m_pTexture runAction: inA];
-    //[outScene_ runAction: outA];
+    [self addChild:_pCardSelectedLayer];
     
 }
+
+
 
 - (void)Tap:(UITapGestureRecognizer*)recognizer
 {
     CGPoint tapPosition = [recognizer locationInView:[[CCDirector sharedDirector] openGLView]];
     //CGPoint tapPosition = [[CCDirector sharedDirector] convertToGL:[self convertToNodeSpace:[recognizer locationInView:[[CCDirector sharedDirector] openGLView]]]];
     
-    
+    for(CCNode *child in self.children)
+    {
+        if([child isKindOfClass:[CardSelectedLayer class]])
+        {
+            [_pCardSelectedLayer Tap:recognizer];
+            return;
+        }
+    }
     
     for(Card *card in _pDeck.m_pDeck)
     {
         
-        float minX = card.m_pTexture.position.x - card.m_pTexture.contentSize.width/2 + _pDeck.position.x;
-        float maxX = card.m_pTexture.position.x + card.m_pTexture.contentSize.width/2 + _pDeck.position.x;
-        float minY = card.m_pTexture.position.y - card.m_pTexture.contentSize.height/2;
-        float maxY = card.m_pTexture.position.y + card.m_pTexture.contentSize.height/2;
+        float minX = card.m_pBackTexture.position.x - (card.m_pBackTexture.contentSize.width*card.m_pBackTexture.scaleX)/2 + _pDeck.position.x;
+        float maxX = card.m_pBackTexture.position.x + (card.m_pBackTexture.contentSize.width*card.m_pBackTexture.scaleX)/2 + _pDeck.position.x;
+        float minY = card.m_pBackTexture.position.y - (card.m_pBackTexture.contentSize.height*card.m_pBackTexture.scaleY)/2;
+        float maxY = card.m_pBackTexture.position.y + (card.m_pBackTexture.contentSize.height*card.m_pBackTexture.scaleY)/2;
        
         
         
         if(tapPosition.x > minX && tapPosition.x < maxX && tapPosition.y > minY && tapPosition.y < maxY)
         {
-            _pSelectedCard.m_pTexture.color = ccWHITE;
-            card.m_pTexture.color = ccRED;
+            _pSelectedCard.m_pBackTexture.color = ccWHITE;
+            card.m_pBackTexture.color = ccRED;
             _pSelectedCard = card;
         }
         
@@ -258,7 +226,12 @@
     
     
     
-    int a = 0;
+    
+}
+
+- (void)Resume
+{
+    _CardSelected = NO;
 }
 
 // on "dealloc" you need to release all your retained objects
