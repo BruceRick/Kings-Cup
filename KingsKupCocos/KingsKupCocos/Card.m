@@ -22,60 +22,63 @@ float previousX = 0;
 
 - (void)Flip
 {
-    
-   // _pFrontTexture.position = ccp(_pBackTexture.position.x, _pBackTexture.position.y);
+    CGSize winSize = [CCDirector sharedDirector].winSize;
     CCNode *allspritesNode = [CCNode node];
     allspritesNode.position = ccp(_pBackTexture.position.x, _pBackTexture.position.y);
     
     CCSprite *front = [[CCSprite alloc] initWithFile:@"KingsKupCardFront.png"];
-    //_pFrontTexture.position = ccp(0,0);
     front.scaleX = _pBackTexture.contentSize.width*_pBackTexture.scaleX/front.contentSize.width;
     front.scaleY = _pBackTexture.contentSize.height* _pBackTexture.scaleY/front.contentSize.height;
     
+    
     CCLabelBMFont *label = [CCLabelBMFont labelWithString:[self GenValLab] fntFile:@"KingsCupBitMapFont-empty.fnt"];
     CCLabelBMFont *label2 = [CCLabelBMFont labelWithString:[self GenValLab] fntFile:@"KingsCupBitMapFont-empty.fnt"];
-    //label.position = ccp(_pBackTexture.position.x, _pBackTexture.position.y);
+    
+    NSString *rule = [[NSString alloc] initWithString:[[RulesAndPlayers Instance].m_pRules objectAtIndex:self.m_Suit*13+self.m_Value]];
+    
+    CCLabelBMFont *ruleLabel = [CCLabelBMFont labelWithString:rule fntFile:@"KingsCupBitMapFont-empty.fnt"];
+    
+    
+    //if(ruleLabel.contentSize.width * ruleLabel.scaleX > _pBackTexture.contentSize.width * _pBackTexture.scaleX)
+        //ruleLabel.scaleX = (_pBackTexture.contentSize.width*0.8*_pBackTexture.scaleX)/ruleLabel.contentSize.width;
+    
     label.position = ccp((-_pBackTexture.contentSize.width*_pBackTexture.scaleX)/2 + label.contentSize.width,
                          (_pBackTexture.contentSize.height* _pBackTexture.scaleY)/2 - label.contentSize.height/1.5);
     
     label2.position = ccp((_pBackTexture.contentSize.width*_pBackTexture.scaleX)/2 - label2.contentSize.width,
                           (-_pBackTexture.contentSize.height*_pBackTexture.scaleY)/2 + label2.contentSize.height/1.5);
+    ruleLabel.position = ccp(0,0);
     
-    label2.scaleY *= -1;
-    label2.scaleX *= -1;
+    
+    
+    //label2.scaleY *= -1;
+    //label2.scaleX *= -1;
     if(self.m_Suit < 2)
     {
         label.color = ccRED;
         label2.color = ccRED;
+        ruleLabel.color = ccRED;
     }
     else
     {
         label.color = ccBLACK;
         label2.color = ccBLACK;
+        ruleLabel.color = ccBLACK;
     }
-    //label.scaleX = 0;
-    
-    //[allspritesNode addChild:label2];
+
     [allspritesNode addChild:front];
     [allspritesNode addChild:label];
     [allspritesNode addChild:label2];
-    
+    [allspritesNode addChild:ruleLabel];
 
-    //float b = 0.0f;
-    //[_pFrontTexture addChild:label];
-    
     float duration_ = 0.1;
     
-    
-    
     [_pBackTexture.parent addChild:allspritesNode];
-    //[self.parent addChild:allspritesNode];
-    CCActionInterval *a = [CCSequence actions:[CCDelayTime actionWithDuration:duration_],[CCActionTween actionWithDuration:duration_ key:@"scaleX" from:0 to:1]];
-    //[_pBackTexture runAction: outA];
+    CCActionInterval *a = [CCSequence actions:[CCDelayTime actionWithDuration:duration_],[CCActionTween actionWithDuration:duration_ key:@"scaleX" from:0 to:1], nil];
     [allspritesNode runAction:a];
     [_pBackTexture runAction:[CCActionTween actionWithDuration:duration_ key:@"scaleX" from:_pBackTexture.scaleX to:0]];
     allspritesNode.scaleX = 0;
-    //[label runAction: inA];
+
     self.m_isFlipped = true;
     
 }
@@ -86,7 +89,7 @@ float previousX = 0;
     [super dealloc];
 }
 
-- (void)Init:(int)a_Suit:(int)a_Value:(NSString*)a_pTexturePath
+- (void)Init:(int)a_Suit value:(int)a_Value texture:(NSString*)a_pTexturePath
 {
     
     _Suit = a_Suit;
@@ -162,13 +165,13 @@ float previousX = 0;
             [value appendString:@"\n♥"];
             break;
         case 1:
-            [value appendString:@"♦"];
+            [value appendString:@"\n♦"];
             break;
         case 2:
-            [value appendString:@"♠"];
+            [value appendString:@"\n♠"];
             break;
         case 3:
-            [value appendString:@"♣"];
+            [value appendString:@"\n♣"];
             break;
             
         default:

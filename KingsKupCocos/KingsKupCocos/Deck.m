@@ -52,7 +52,7 @@ CGSize winSize;
         int suit = (i+1)/_NumberOfCards;
         int value = i - (_NumberOfCards*suit);
         
-        [_newCard Init:suit :value:a_pCardTexturePath];
+        [_newCard Init:suit value:value texture:a_pCardTexturePath];
         
         [_pAllCards addObject:_newCard];
         

@@ -116,6 +116,7 @@
 	// cocos2d will automatically release all the children (Label)
 	
 	// don't forget to call "super dealloc"
+    [self release];
 	[super dealloc];
 }
 

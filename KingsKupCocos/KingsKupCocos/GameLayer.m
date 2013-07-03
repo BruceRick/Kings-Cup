@@ -108,7 +108,6 @@
         
         [_pDeck Initialize:(NSString*)@"KingsKupCard.png"];
         
-        //[_pDeck Initialize:[[CCSprite alloc ]initWithFile:@"Card.jpg"]];
         [self addChild:pBackground];
         
         [_pDeck Shuffle];
@@ -116,7 +115,6 @@
         
         [self addChild:_pDeck];
         [self schedule:@selector(update:)];
-        //[self schedule:@selector(draw:)];
         _pSelectedCard = [_pDeck.m_pDeck objectAtIndex:0];
         
         
@@ -192,7 +190,7 @@
 
 - (void)Tap:(UITapGestureRecognizer*)recognizer
 {
-    CGPoint tapPosition = [recognizer locationInView:[[CCDirector sharedDirector] openGLView]];
+    CGPoint tapPosition = [recognizer locationInView:[[CCDirector sharedDirector] view]];
     //CGPoint tapPosition = [[CCDirector sharedDirector] convertToGL:[self convertToNodeSpace:[recognizer locationInView:[[CCDirector sharedDirector] openGLView]]]];
     
     for(CCNode *child in self.children)
@@ -242,6 +240,7 @@
 	// cocos2d will automatically release all the children (Label)
 	
 	// don't forget to call "super dealloc"
+    [self release];
 	[super dealloc];
 }
 

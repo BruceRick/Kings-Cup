@@ -6,14 +6,10 @@
 //  Copyright __MyCompanyName__ 2013. All rights reserved.
 //
 
-
 #import <GameKit/GameKit.h>
 #import "Deck.h"
-
-// When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 
-// HelloWorldLayer
 @interface GameLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
     

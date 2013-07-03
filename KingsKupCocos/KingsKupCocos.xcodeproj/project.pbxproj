@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		085D9E171769619600463A23 /* WhiteRec.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E161769619500463A23 /* WhiteRec.jpg */; };
+		0820CE8A177E775E004A734A /* RulesAndPlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0820CE89177E775D004A734A /* RulesAndPlayers.m */; };
+		0820CE8C17827B75004A734A /* RulesAndPlayers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0820CE8B17827B75004A734A /* RulesAndPlayers.plist */; };
+		0820D03417835406004A734A /* WhiteRect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0820D03317835406004A734A /* WhiteRect.jpg */; };
+		0820D03717835485004A734A /* NewRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0820D03617835484004A734A /* NewRule.m */; };
 		085D9E3C176972F700463A23 /* KingsCupBitMapFont-empty.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E3A176972F400463A23 /* KingsCupBitMapFont-empty.fnt */; };
 		085D9E3D176972F700463A23 /* KingsCupBitMapFont-empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E3B176972F500463A23 /* KingsCupBitMapFont-empty.png */; };
 		085D9E401769766E00463A23 /* KingsKupCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E3E1769766E00463A23 /* KingsKupCard.png */; };
@@ -15,7 +18,6 @@
 		085D9E43176A489900463A23 /* LogoScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E42176A489900463A23 /* LogoScreen.png */; };
 		085D9E45176A48BD00463A23 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E44176A48BD00463A23 /* Default.png */; };
 		085D9E48176A515400463A23 /* CardSelectedLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D9E47176A515300463A23 /* CardSelectedLayer.m */; };
-		085D9E4A176A9A2300463A23 /* BlackRect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E49176A9A2300463A23 /* BlackRect.jpg */; };
 		085D9E4C176A9CAA00463A23 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 085D9E4B176A9CAA00463A23 /* Default-568h@2x.png */; };
 		088174EC1717402600B4BB9B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088174EB1717402600B4BB9B /* QuartzCore.framework */; };
 		088174EE1717402600B4BB9B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088174ED1717402600B4BB9B /* OpenGLES.framework */; };
@@ -146,10 +148,17 @@
 		0881768917179C7800B4BB9B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 0881768817179C7800B4BB9B /* Card.m */; };
 		0881768C1717AA9C00B4BB9B /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 0881768B1717AA9C00B4BB9B /* Deck.m */; };
 		088176921717B5CE00B4BB9B /* Card.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 088176911717B5CE00B4BB9B /* Card.jpg */; };
+		089BC4DD176FCA3C00CF083A /* BlackRect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 089BC4DC176FCA3C00CF083A /* BlackRect.jpg */; };
+		089BC4E0176FCA5700CF083A /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 089BC4DF176FCA5600CF083A /* MainMenuLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		085D9E161769619500463A23 /* WhiteRec.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WhiteRec.jpg; sourceTree = "<group>"; };
+		0820CE88177E775D004A734A /* RulesAndPlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulesAndPlayers.h; sourceTree = "<group>"; };
+		0820CE89177E775D004A734A /* RulesAndPlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulesAndPlayers.m; sourceTree = "<group>"; };
+		0820CE8B17827B75004A734A /* RulesAndPlayers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RulesAndPlayers.plist; sourceTree = "<group>"; };
+		0820D03317835406004A734A /* WhiteRect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WhiteRect.jpg; sourceTree = "<group>"; };
+		0820D03517835484004A734A /* NewRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRule.h; sourceTree = "<group>"; };
+		0820D03617835484004A734A /* NewRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRule.m; sourceTree = "<group>"; };
 		085D9E3A176972F400463A23 /* KingsCupBitMapFont-empty.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KingsCupBitMapFont-empty.fnt"; sourceTree = "<group>"; };
 		085D9E3B176972F500463A23 /* KingsCupBitMapFont-empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KingsCupBitMapFont-empty.png"; sourceTree = "<group>"; };
 		085D9E3E1769766E00463A23 /* KingsKupCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KingsKupCard.png; sourceTree = "<group>"; };
@@ -158,7 +167,6 @@
 		085D9E44176A48BD00463A23 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		085D9E46176A515300463A23 /* CardSelectedLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSelectedLayer.h; sourceTree = "<group>"; };
 		085D9E47176A515300463A23 /* CardSelectedLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSelectedLayer.m; sourceTree = "<group>"; };
-		085D9E49176A9A2300463A23 /* BlackRect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BlackRect.jpg; path = ../../../Pictures/BlackRect.jpg; sourceTree = "<group>"; };
 		085D9E4B176A9CAA00463A23 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		088174E71717402600B4BB9B /* KingsKupCocos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingsKupCocos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		088174EB1717402600B4BB9B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -427,6 +435,9 @@
 		0881768A1717AA9B00B4BB9B /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		0881768B1717AA9C00B4BB9B /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		088176911717B5CE00B4BB9B /* Card.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Card.jpg; sourceTree = "<group>"; };
+		089BC4DC176FCA3C00CF083A /* BlackRect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlackRect.jpg; sourceTree = "<group>"; };
+		089BC4DE176FCA5600CF083A /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
+		089BC4DF176FCA5600CF083A /* MainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,6 +463,7 @@
 		088174DC1717402600B4BB9B = {
 			isa = PBXGroup;
 			children = (
+				0820CE8B17827B75004A734A /* RulesAndPlayers.plist */,
 				085D9E4B176A9CAA00463A23 /* Default-568h@2x.png */,
 				085D9E44176A48BD00463A23 /* Default.png */,
 				088174FD1717402600B4BB9B /* KingsKupCocos */,
@@ -487,21 +499,13 @@
 		088174FD1717402600B4BB9B /* KingsKupCocos */ = {
 			isa = PBXGroup;
 			children = (
+				089BC4E2176FCAA100CF083A /* Classes */,
+				089BC4E1176FCA8F00CF083A /* Layers */,
 				088176751717402800B4BB9B /* AppDelegate.h */,
 				088176761717402800B4BB9B /* AppDelegate.m */,
-				085D9E46176A515300463A23 /* CardSelectedLayer.h */,
-				085D9E47176A515300463A23 /* CardSelectedLayer.m */,
-				088176781717402800B4BB9B /* GameLayer.h */,
-				088176791717402800B4BB9B /* GameLayer.m */,
-				0881767B1717402800B4BB9B /* IntroLayer.h */,
-				0881767C1717402800B4BB9B /* IntroLayer.m */,
 				088174FE1717402600B4BB9B /* Resources */,
 				088175181717402700B4BB9B /* libs */,
 				088176711717402800B4BB9B /* Supporting Files */,
-				0881768717179C7800B4BB9B /* Card.h */,
-				0881768817179C7800B4BB9B /* Card.m */,
-				0881768A1717AA9B00B4BB9B /* Deck.h */,
-				0881768B1717AA9C00B4BB9B /* Deck.m */,
 			);
 			path = KingsKupCocos;
 			sourceTree = "<group>";
@@ -509,13 +513,13 @@
 		088174FE1717402600B4BB9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				085D9E49176A9A2300463A23 /* BlackRect.jpg */,
+				0820D03317835406004A734A /* WhiteRect.jpg */,
+				089BC4DC176FCA3C00CF083A /* BlackRect.jpg */,
 				085D9E42176A489900463A23 /* LogoScreen.png */,
 				085D9E3E1769766E00463A23 /* KingsKupCard.png */,
 				085D9E3F1769766E00463A23 /* KingsKupCardFront.png */,
 				085D9E3A176972F400463A23 /* KingsCupBitMapFont-empty.fnt */,
 				085D9E3B176972F500463A23 /* KingsCupBitMapFont-empty.png */,
-				085D9E161769619500463A23 /* WhiteRec.jpg */,
 				088176911717B5CE00B4BB9B /* Card.jpg */,
 				088176851717909200B4BB9B /* FeltTable.jpeg */,
 				088175011717402700B4BB9B /* Default-Landscape~ipad.png */,
@@ -877,6 +881,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		089BC4E1176FCA8F00CF083A /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				085D9E46176A515300463A23 /* CardSelectedLayer.h */,
+				085D9E47176A515300463A23 /* CardSelectedLayer.m */,
+				088176781717402800B4BB9B /* GameLayer.h */,
+				088176791717402800B4BB9B /* GameLayer.m */,
+				0881767B1717402800B4BB9B /* IntroLayer.h */,
+				0881767C1717402800B4BB9B /* IntroLayer.m */,
+				089BC4DE176FCA5600CF083A /* MainMenuLayer.h */,
+				089BC4DF176FCA5600CF083A /* MainMenuLayer.m */,
+				0820D03517835484004A734A /* NewRule.h */,
+				0820D03617835484004A734A /* NewRule.m */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		089BC4E2176FCAA100CF083A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0881768717179C7800B4BB9B /* Card.h */,
+				0881768817179C7800B4BB9B /* Card.m */,
+				0881768A1717AA9B00B4BB9B /* Deck.h */,
+				0881768B1717AA9C00B4BB9B /* Deck.m */,
+				0820CE88177E775D004A734A /* RulesAndPlayers.h */,
+				0820CE89177E775D004A734A /* RulesAndPlayers.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -903,7 +937,7 @@
 		088174DE1717402600B4BB9B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 088174E11717402600B4BB9B /* Build configuration list for PBXProject "KingsKupCocos" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -941,15 +975,16 @@
 				088176551717402800B4BB9B /* ChangeLog in Resources */,
 				088176861717909200B4BB9B /* FeltTable.jpeg in Resources */,
 				088176921717B5CE00B4BB9B /* Card.jpg in Resources */,
-				085D9E171769619600463A23 /* WhiteRec.jpg in Resources */,
 				085D9E3C176972F700463A23 /* KingsCupBitMapFont-empty.fnt in Resources */,
 				085D9E3D176972F700463A23 /* KingsCupBitMapFont-empty.png in Resources */,
 				085D9E401769766E00463A23 /* KingsKupCard.png in Resources */,
 				085D9E411769766E00463A23 /* KingsKupCardFront.png in Resources */,
 				085D9E43176A489900463A23 /* LogoScreen.png in Resources */,
 				085D9E45176A48BD00463A23 /* Default.png in Resources */,
-				085D9E4A176A9A2300463A23 /* BlackRect.jpg in Resources */,
 				085D9E4C176A9CAA00463A23 /* Default-568h@2x.png in Resources */,
+				089BC4DD176FCA3C00CF083A /* BlackRect.jpg in Resources */,
+				0820CE8C17827B75004A734A /* RulesAndPlayers.plist in Resources */,
+				0820D03417835406004A734A /* WhiteRect.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1067,6 +1102,9 @@
 				0881768917179C7800B4BB9B /* Card.m in Sources */,
 				0881768C1717AA9C00B4BB9B /* Deck.m in Sources */,
 				085D9E48176A515400463A23 /* CardSelectedLayer.m in Sources */,
+				089BC4E0176FCA5700CF083A /* MainMenuLayer.m in Sources */,
+				0820CE8A177E775E004A734A /* RulesAndPlayers.m in Sources */,
+				0820D03717835485004A734A /* NewRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,6 +1115,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1087,6 +1129,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
@@ -1098,6 +1141,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1106,6 +1153,7 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
